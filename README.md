@@ -1,4 +1,4 @@
-#Land Contracts in Detroit
+# Land Contracts in Detroit
 
 Zillow scraping functionality credit goes to this repo: https://github.com/ChrisMuir/Zillow. Without it I would not be able to jump start this project.
 
@@ -9,7 +9,7 @@ Each directory contains the tooling necessary to search for this data.
 
 This repo is a work in progress, and simply creates a csv of all relevant data scraped from potential land contract listings.
 
-#License
+# License
 
 Copyright (c) 2019-2020 Matthew Dobson
 
