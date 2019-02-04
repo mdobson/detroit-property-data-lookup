@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import pandas as pd
-import time
+import time as tf
 import datetime
 
 
@@ -17,8 +17,8 @@ class JobsSpider(scrapy.Spider):
 		d = { 'dates': time, 'titles': titles, 'links': links }
 		today = datetime.date.today()
 		time_tuple = (today.year, today.month, today.day, 0, 0, 0, 0, 0, 0)
-		df['date_scraped'] = time.strftime('%m/%d/%Y', time_tuple)
-		datestr = time.strftime('%m_%d_%Y', time_tuple)
 		df = pd.DataFrame(data=d)
-		df.to_csv('craigslist_%s.csv' % datestr, columns=['dates', 'titles', 'links'])
+		df['date_scraped'] = tf.strftime('%m/%d/%Y', time_tuple)
+		datestr = tf.strftime('%m_%d_%Y', time_tuple)
+		df.to_csv('craigslist_%s.csv' % datestr, columns=['dates', 'titles', 'links', 'date_scraped'])
 		
